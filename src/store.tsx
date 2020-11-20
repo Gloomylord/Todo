@@ -28,11 +28,7 @@ class Store {
 
     @action public editTodo = (id: string): void => {
         this.list.forEach((item: ITodo) => {
-            if (item.id === id) {
-                item.isEdit = true;
-            } else {
-                item.isEdit = false;
-            }
+            item.isEdit = item.id === id;
         })
     };
 }
