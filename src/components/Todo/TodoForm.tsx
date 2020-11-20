@@ -19,6 +19,7 @@ const TodoForm: React.FC = () => {
 
     const onClick = useCallback(() => {
         if (task !== '') {
+            setTask('');
             store.addTodo({id: nanoid(), text: task, isEdit: false});
         }
     }, [task]);
